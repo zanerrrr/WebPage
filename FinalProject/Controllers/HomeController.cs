@@ -1,8 +1,8 @@
-﻿using FinalProject.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using FinalProject.Models;
 
-namespace ReciepeBlog.Controllers
+namespace RecipeBlog.Controllers
 {
     public class HomeController : Controller
     {
@@ -19,6 +19,11 @@ namespace ReciepeBlog.Controllers
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult Recipes()
         {
             return View();
         }
