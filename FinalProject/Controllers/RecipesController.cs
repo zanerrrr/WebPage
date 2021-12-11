@@ -6,6 +6,7 @@ namespace RecipeBlog.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.selectedItem = "recipes";
             return View();
         }
     }
