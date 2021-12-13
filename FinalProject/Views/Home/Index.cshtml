@@ -1,13 +1,15 @@
-﻿@{
+﻿@using RecipeBlog.UI.Models
+@model SubscribersModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
-
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>You are entering the world of amazing stories and tasty food. </p>
-    <p>Here you can find the most memorable recipes. The ones that bring you joy and happiness with every bite.</p>
+<div class="text-allign">
+	<h1 class="display-4">Welcome</h1>
+	<p>You are entering the world of amazing stories and tasty food. </p>
+	<p>Here you can find the most memorable recipes. The ones that bring you joy and happiness with every bite.</p>
 </div>
+
 <br />
 <br />
 
@@ -23,16 +25,17 @@
     <p>click to action text</p>
 </div>
 
- <form method="post" id="FormId">
-    <div class="container" id="ContainerId" style="background-color:white">
+@using (Html.BeginForm("ModifyViewData", "Home", FormMethod.Post))
+{
+  <div class="container" id="ContainerId" style="background-color:white">
     <input id="InputTextId" type="text" placeholder="Name" name="name" required>
-    <input id="InputTextId" type="text" placeholder="Email address" name="mail" required>
+    <input id="InputTextId" type="text" placeholder="Email address" name="email" required>
   </div>
-
   <div class="container">
     <input type="submit" id="SubscribeButtonId" value="Subscribe">
   </div>
-</form>
+}
+
 @*<form method="post" id="FormId">
 	<div class="form-group" style="background-color:white" id="ContainerId">
 		<label asp-for="Name"></label>
@@ -45,9 +48,7 @@
 		<span asp-validation-for="Email" class="text-danger"></span>
 	</div>
 	<input type="submit" class="btn-primary" value="Subscribe" id="SubscribeButtonId"/>
-
-</form>*@
-
+ </form>*@
 
 
 
