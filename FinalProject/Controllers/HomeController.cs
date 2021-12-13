@@ -34,15 +34,15 @@ namespace RecipeBlog.Controllers
         {
             if (ModelState.IsValid)
             {
-                SubscribersModel subscribersModel = new SubscribersModel
-                {
-                    Name = model.Name,
-                    Email = model.Email,
-                    ListOfSubscribers = model.ListOfSubscribers
-                };
+                //SubscribersModel subscribersModel = new SubscribersModel
+                //{
+                //    Name = model.Name,
+                //    Email = model.Email,
+                //    ListOfSubscribers = model.ListOfSubscribers
+                //};
 
-                subscribersModel.SaveSubscribers(subscribersModel);
-                return RedirectToAction("Index");
+                //subscribersModel.SaveSubscribers(subscribersModel);
+                //return RedirectToAction("Index");
             }
             return View(model);
         }
