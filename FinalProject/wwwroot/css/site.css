@@ -1,5 +1,5 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -9,12 +9,12 @@ html {
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 
 #FormId {
@@ -36,7 +36,7 @@ body {
 }
 
 #SubscribeButtonId {
-    background-color: #04AA6D;
+    background-color: red;
     color: white;
     border: none;
 }
