@@ -9,7 +9,6 @@
 	<p>You are entering the world of amazing stories and tasty food. </p>
 	<p>Here you can find the most memorable recipes. The ones that bring you joy and happiness with every bite.</p>
 </div>
-
 <br />
 <br />
 
@@ -20,35 +19,21 @@
  </ul>
 <br />
 <br />
+
+
  <div class="container" id="ContainerId">
-    <h2 id="SubscribeTextH2Id">Subscribe to our Newsletter</h2>
+    <h2 id="SubscribeTextH2Id">Subscribe to recieve Recipies</h2>
     <p>click to action text</p>
 </div>
 
-@using (Html.BeginForm("ModifyViewData", "Home", FormMethod.Post))
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
 {
-  <div class="container" id="ContainerId" style="background-color:white">
-    <input id="InputTextId" type="text" placeholder="Name" name="name" required>
-    <input id="InputTextId" type="text" placeholder="Email address" name="email" required>
-  </div>
-  <div class="container">
-    <input type="submit" id="SubscribeButtonId" value="Subscribe">
-  </div>
+	@Html.TextBoxFor(m => m.Name)
+	<br />
+	@Html.TextBoxFor(m => m.Email)
+	<input type="submit" class="btn-primary" value="Subscribe" id="SubscribeButtonId"/>
 }
 
-@*<form method="post" id="FormId">
-	<div class="form-group" style="background-color:white" id="ContainerId">
-		<label asp-for="Name"></label>
-		<input asp-for="Name" placeholder="Name" class="form-control"/>
-		<span asp-validation-for="Name" class="text-danger"></span>
-	</div>
-	<div class="form-group" style="background-color:white" id="ContainerId">
-		<label asp-for="Email"></label>
-		<input asp-for="Email" placeholder="Name" class="form-control"/>
-		<span asp-validation-for="Email" class="text-danger"></span>
-	</div>
-	<input type="submit" class="btn-primary" value="Subscribe" id="SubscribeButtonId"/>
- </form>*@
 
 
 

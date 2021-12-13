@@ -2,7 +2,8 @@
 {
     public class Subscribers
     {
-        public static List<Subscribers> ListOfSubscribers { get; set; }
+        public static List<Subscribers> listOfSubscribers = new List<Subscribers>();
+
 
     }
 

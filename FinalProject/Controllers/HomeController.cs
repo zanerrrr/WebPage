@@ -23,28 +23,14 @@ namespace RecipeBlog.Controllers
         {
             return View();
         }
-
         [HttpPost]
-        public IActionResult ModifyViewData(string name, string email)
+        public ActionResult Index(SubscribersModel subscribers)
         {
-            return RedirectToAction("Index");
-        }
-
-        public IActionResult AddSubscribers(SubscribersModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                //SubscribersModel subscribersModel = new SubscribersModel
-                //{
-                //    Name = model.Name,
-                //    Email = model.Email,
-                //    ListOfSubscribers = model.ListOfSubscribers
-                //};
-
-                //subscribersModel.SaveSubscribers(subscribersModel);
-                //return RedirectToAction("Index");
-            }
-            return View(model);
+            string name = subscribers.Name;
+            string email = subscribers.Email;
+            
+            return View();
+           
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
