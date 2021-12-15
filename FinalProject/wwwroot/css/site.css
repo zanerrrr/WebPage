@@ -1,5 +1,29 @@
-html {
-    font-size: 14px;
+html body{
+    background-color: #F9EEC5;
+}
+
+h1 {
+    text-align: center;
+    background-color: #F9EEC5;
+}
+
+h2 {
+    color: white;
+    border: 5px solid #4f5C90;
+    background-color: #4f5C90;
+    border-radius: 15px;
+}
+
+section {
+    flex: 2 1 100px;
+    margin: 25px;
+    padding: 50px;
+}
+
+img {
+    border: 3px solid black;
+    padding: 5px;
+    border-radius: 25px;
 }
 
 @media (min-width: 768px) {
