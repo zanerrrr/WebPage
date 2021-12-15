@@ -4,7 +4,7 @@
 
 namespace RecipeBlog.BLL.Migrations
 {
-    public partial class firstMigration : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -19,7 +19,7 @@ namespace RecipeBlog.BLL.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Recipies", x => x.Id);
+                    table.PrimaryKey("PK_Recipes", x => x.Id);
                 });
         }
 

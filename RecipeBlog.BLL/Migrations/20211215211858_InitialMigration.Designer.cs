@@ -11,8 +11,8 @@ using RecipeBlog.BLL.Context;
 namespace RecipeBlog.BLL.Migrations
 {
     [DbContext(typeof(RecipesDBContext))]
-    [Migration("20211215201042_firstMigration")]
-    partial class firstMigration
+    [Migration("20211215211858_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -41,7 +41,7 @@ namespace RecipeBlog.BLL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Recipies");
+                    b.ToTable("Recipes");
                 });
 #pragma warning restore 612, 618
         }

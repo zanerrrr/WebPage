@@ -39,7 +39,7 @@ namespace RecipeBlog.BLL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Recipies");
+                    b.ToTable("Recipes");
                 });
 #pragma warning restore 612, 618
         }
