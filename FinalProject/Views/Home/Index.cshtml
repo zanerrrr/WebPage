@@ -1,5 +1,5 @@
 ﻿@using RecipeBlog.UI.Models
-@model SubscribersModel
+@model SubscriberModel
 
 @{
     ViewData["Title"] = "Home Page";
@@ -28,10 +28,9 @@
 
 @using (Html.BeginForm("Index", "Home", FormMethod.Post))
 {
-	@Html.AntiForgeryToken()
 	@Html.TextBoxFor(m => m.Name, new {placeholder = "Name"})
 	<br />
-	@Html.TextBoxFor(m => m.Email, new {placeholder = "EMail"})
+	@Html.TextBoxFor(m => m.Email, new {placeholder = "Email"})
 	<input type="submit" class="btn-primary" value="Subscribe" id="SubscribeButtonId"/>
 }
 

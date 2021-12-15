@@ -2,8 +2,8 @@
 
 namespace RecipeBlog.UI.Models
 {   
-    [Serializable]
-    public class SubscribersModel
+    
+    public class SubscriberModel
     {      
         //[Key]
         //public int Id { get; set; }

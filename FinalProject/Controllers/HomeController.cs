@@ -8,7 +8,7 @@ namespace RecipeBlog.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+        
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -23,19 +23,28 @@ namespace RecipeBlog.Controllers
         {
             return View();
         }
+
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Index(SubscribersModel m)
+        public IActionResult Index(SubscriberModel m)
         {
-            if (!ModelState.IsValid)
-            {
-                string name = m.Name;
-                string email = m.Email;
+            try
+			{
+                if (!ModelState.IsValid)
+                {
+                    string name = m.Name;
+                    string email = m.Email;
+                }
+
             }
+            catch (Exception ex)
+			{
+                TempData["msg"] = ex.Message;
+			}
                         
             return View();
            
-        }
+        }    
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
