@@ -24,11 +24,15 @@ namespace RecipeBlog.Controllers
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Index(SubscribersModel m)
         {
-            string name = m.Name;
-            string email = m.Email;
-            
+            if (!ModelState.IsValid)
+            {
+                string name = m.Name;
+                string email = m.Email;
+            }
+                        
             return View();
            
         }

@@ -5,13 +5,13 @@ namespace RecipeBlog.UI.Models
     [Serializable]
     public class SubscribersModel
     {      
-        [Key]
-        public int Id { get; set; }
+        //[Key]
+        //public int Id { get; set; }
         
-        [Required]
+        [Required(ErrorMessage = "Please enter your Name!" )]
         public string Name { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter your Email!")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
