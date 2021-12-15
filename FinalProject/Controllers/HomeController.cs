@@ -24,10 +24,10 @@ namespace RecipeBlog.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index(SubscribersModel subscribers)
+        public ActionResult Index(SubscribersModel m)
         {
-            string name = subscribers.Name;
-            string email = subscribers.Email;
+            string name = m.Name;
+            string email = m.Email;
             
             return View();
            
