@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace RecipeBlog.BLL
 {
-	public class RecipiesDataRepository
+	public class RecipesDataRepository
 	{
-		private readonly RecipiesDBContext _context;
+		private readonly RecipesDBContext _context;
 
-		public RecipiesDataRepository(RecipiesDBContext context)
+		public RecipesDataRepository(RecipesDBContext context)
 		{
 			_context = context;
 		}

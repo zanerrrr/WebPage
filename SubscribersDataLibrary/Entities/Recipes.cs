@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RecipeBlog.BLL.Entities
 {
-	public class Recipies
+	public class Recipes
 	{
 		[Key]
 		public int Id { get; set; }
