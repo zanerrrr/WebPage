@@ -1,6 +1,6 @@
 html {
     font-size: 14px;
-    background-color: #F9EEC5;
+    background-color: #E71EDA;
 }
 
 body {
@@ -10,13 +10,13 @@ body {
 
 h1 {
     text-align: center;
-    background-color: #4f5C90;
+    background-color: #E71EDA;
 }
 
 h2 {
     color: white;
-    border: 5px solid #4f5C90;
-    background-color: #4f5C90;
+    border: 5px solid #E71EDA;
+    background-color: #E71EDA;
     border-radius: 15px;
 }
 
