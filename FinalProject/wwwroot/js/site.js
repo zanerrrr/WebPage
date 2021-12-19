@@ -6,3 +6,4 @@
 $("#SubscribeButtonId").click(function () {
     alert("You have subscibed! Thank you!")
 })
+
