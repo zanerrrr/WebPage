@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RecipeBlog.BLL.Context;
 
@@ -10,9 +11,10 @@ using RecipeBlog.BLL.Context;
 namespace RecipeBlog.BLL.Migrations
 {
     [DbContext(typeof(RecipesDBContext))]
-    partial class RecipesDBContextModelSnapshot : ModelSnapshot
+    [Migration("20211219081208_MigrationUpd")]
+    partial class MigrationUpd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -1,20 +1,16 @@
 ﻿using RecipeBlog.BLL.Context;
-using RecipeBlog.UI.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using RecipeBlog.BLL.Entities;
 
 namespace RecipeBlog.BLL
 {
 	public class RecipesDataRepository
 	{
-		private readonly RecipesDBContext _context;
-
-		public RecipesDataRepository(RecipesDBContext context)
-		{
-			_context = context;
+		public List<Recipes> GetRecipes() 
+		{ 
+			using (var context = new RecipesDBContext())
+            {
+				return context.Recipes.ToList();
+            }
 		}
 
 	}
