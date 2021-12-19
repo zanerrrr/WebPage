@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RecipeBlog.BLL.Context;
 
@@ -10,9 +11,10 @@ using RecipeBlog.BLL.Context;
 namespace RecipeBlog.BLL.Migrations
 {
     [DbContext(typeof(RecipesDBContext))]
-    partial class RecipesDBContextModelSnapshot : ModelSnapshot
+    [Migration("20211216210433_MigrationUpdated")]
+    partial class MigrationUpdated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,15 +31,14 @@ namespace RecipeBlog.BLL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Ingredients")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Instructions")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

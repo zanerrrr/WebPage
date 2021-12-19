@@ -1,166 +1,190 @@
-﻿@{
+﻿@using RecipeBlog.UI.Models
+@model List<RecipesModel>
+
+@{
     ViewData["Title"] = "Your Recipes";
 }
 
-<!DOCTYPE html>
-<html lang="en">
+<table>
+    @foreach (var recipe in Model)
+    {
+        <tr>
+            <td>
+                @Html.Encode(recipe.Id)
+            </td>
+            <td>
+                @Html.Encode(recipe.Title)
+            </td>
+            <td>
+                @Html.Encode(recipe.Description)
+            </td>
+            <td>
+                @Html.Encode(recipe.Ingredients)
+            </td>
+        </tr>
+    }
 
-<head>
- <meta charset="UTF-8">
-<title>My favorite Recipes</title>
-  <link="stylesheet" type="text/css" href="style.css"
-</head>
+</table>
+
+@*<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <title>My favorite Recipes</title>
+    <link="stylesheet" type="text/css" href="style.css"
+    </head>
     <body>
-      <h1>My Favorite Recipes</h1>
-      <nav>
-        <ul>
-          <li class="inline"> <a href="#Chicken">Chicken Pasta </a></li>
-          <li class="inline"><a href="#ceasar">Chicken Ceasar</a></li>
-          <li class="inline"><a href="#coconut">Coconut Macaroons</a></li>
-        </ul>
-      </nav>
-      <article>
-        <hr>
-       <h2 id="chicken">Chicken  Pasta with Tomatoes and Spinach</h2>
-        <hr>
-        <div class="fb">
-       <section> <img src="https://www.eatwell101.com/wp-content/uploads/2017/06/chicken-pasta-recipe.jpg" width="300px" alt="chicken pasta with tomatos and spinach">
-   
-        </section>
-        <section>
-        <h3>Ingredients:</h3>
-    
-        <table>
-          <tr>
-            <th>Amount</th>
-            <th>Ingredient</th>
-          </tr>
-          <tr>
-            <td class="amount">amount 1</td>
-            <td class="ingredient">ingredient 1</td>
-          </tr>
-          <tr>
-            <td class="amount">amount 2</td>
-            <td class="ingredient">ingredient 2</td>
-          </tr>
-          <tr>
-            <td class="amount">amount 3</td>
-            <td class="ingredient">ingredient 3</td>
-          </tr>
-        </table>
-        </section>
-        <section>
-         <h3>Steps:</h3>
-     <ol>
-       <li>Step 1</li>   
-       <li>Step 2</li>   
-       <li>Step 3</li>   
-       <li>Enjoy!</li>   
-     </ol>
-        </section>
-        </div>
-      </article>
-      <hr>
-           <article>
-        
-       <h2 id="ceasar">Chicken Ceasar Salad</h2>
-        <hr>
-             <div class="fb">
-       <section> <img src="https://jane-athome.com/wp-content/uploads/2015/06/Chicken-Caesar-Salad.jpg" width="300px" alt="chicken pasta with tomatos and spinach">
-   
-        </section>
-        <section>
-        <h3>Ingredients:</h3>
-    
-        <table>
-          <tr>
-            <th>Amount</th>
-            <th>Ingredient</th>
-          </tr>
-          <tr>
-            <td class="amount">amount 1</td>
-            <td class="ingredient">ingredient 1</td>
-          </tr>
-          <tr>
-            <td class="amount">amount 2</td>
-            <td class="ingredient">ingredient 2</td>
-          </tr>
-          <tr>
-            <td class="amount">amount 3</td>
-            <td class="ingredient">ingredient 3</td>
-          </tr>
-        </table>
-        </section>
-        <section>
-         <h3>Steps:</h3>
-     <ol>
-       <li>Step 1</li>   
-       <li>Step 2</li>   
-       <li>Step 3</li>   
-       <li>Enjoy!</li>   
-     </ol>
-        </section>
-             </div>
-      </article>
-           
-      
-           
-        <hr>
-      <article>
-     
-      <h2 id="coconut">Coconut Macaroons</h2>
-        <hr>
-        <div class="fb">
-         <section>
-      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.-LL7A-QJF98R8FhnRRvi2wHaKE%26pid%3DApi&f=1" height="300px" alt="coconut macaroons" title="What a wonderful treat!!" >
-        </section>
-        <section>
-    
-      
-      <p>Coconut macaroons are a wonderfully light and fluffy cookie made up of mostly egg whites and coconut.</p>
-      <p>This recipe yields 1<sup>1</sup>&frasl;<sub>2</sub> dozen cookies.</p>
-      
-      <h3>Ingredients:</h3>
-      
-      <table>
-        <tr>
-          <th>Amount</th>
-          <th>Ingedient</th>
-        </tr>
-        <tr>
-          <td class="amount">2</td>
-          <td class="ingredients">egg whites</td>
-        </tr>
-        <tr>
-          <td class="amount"><sup>1</sup>&frasl;<sub>2</sub> tsp</td>
-          <td class="ingredient">vanilla</td>
-        </tr>
-        <tr>
-          <td class="amount"><sup>2</sup>&frasl;<sub>3</sub> cup</td>
-          <td class="ingredient">sugar</td>
-        </tr>
-        <tr>
-          <td class="amount">1 <sup>1</sup>&frasl;<sub>2</sub> cups</td>
-          <td class="ingredient">coconut</td>
-        </tr>
-        <td class="amount">dash</td>
-        <td class="ingredient">salt</td>
-        </tr>
-          </table>
-        </section>
-        <section>
-        <br>
-      <h3>Directions</h3>
-        <ol>
-          <li>Pre-heat oven to 325<sup>o</sup> F</li>
-          <li>Beat egg whites with a dash of salt and vanilla until soft peaks form.</li>
-          <li>Gradually add sugar, beating until stiff. </li>
-          <li> Gently fold in the coconut.</li>
-          <li>Drop by teaspoon onto a greased cookie sheet. </li>
-          </section>
-          </div>
-          </article>
+    <h1>My Favorite Recipes</h1>
+    <nav>
+    <ul>
+    <li class="inline"> <a href="#Chicken">Chicken Pasta </a></li>
+    <li class="inline"><a href="#ceasar">Chicken Ceasar</a></li>
+    <li class="inline"><a href="#coconut">Coconut Macaroons</a></li>
+    </ul>
+    </nav>
+    <article>
+    <hr>
+    <h2 id="chicken">Chicken  Pasta with Tomatoes and Spinach</h2>
+    <hr>
+    <div class="fb">
+    <section> <img src="https://www.eatwell101.com/wp-content/uploads/2017/06/chicken-pasta-recipe.jpg" width="300px" alt="chicken pasta with tomatos and spinach">
+
+    </section>
+    <section>
+    <h3>Ingredients:</h3>
+
+    <table>
+    <tr>
+    <th>Amount</th>
+    <th>Ingredient</th>
+    </tr>
+    <tr>
+    <td class="amount">amount 1</td>
+    <td class="ingredient">ingredient 1</td>
+    </tr>
+    <tr>
+    <td class="amount">amount 2</td>
+    <td class="ingredient">ingredient 2</td>
+    </tr>
+    <tr>
+    <td class="amount">amount 3</td>
+    <td class="ingredient">ingredient 3</td>
+    </tr>
+    </table>
+    </section>
+    <section>
+    <h3>Steps:</h3>
+    <ol>
+    <li>Step 1</li>
+    <li>Step 2</li>
+    <li>Step 3</li>
+    <li>Enjoy!</li>
+    </ol>
+    </section>
+    </div>
+    </article>
+    <hr>
+    <article>
+
+    <h2 id="ceasar">Chicken Ceasar Salad</h2>
+    <hr>
+    <div class="fb">
+    <section> <img src="https://jane-athome.com/wp-content/uploads/2015/06/Chicken-Caesar-Salad.jpg" width="300px" alt="chicken pasta with tomatos and spinach">
+
+    </section>
+    <section>
+    <h3>Ingredients:</h3>
+
+    <table>
+    <tr>
+    <th>Amount</th>
+    <th>Ingredient</th>
+    </tr>
+    <tr>
+    <td class="amount">amount 1</td>
+    <td class="ingredient">ingredient 1</td>
+    </tr>
+    <tr>
+    <td class="amount">amount 2</td>
+    <td class="ingredient">ingredient 2</td>
+    </tr>
+    <tr>
+    <td class="amount">amount 3</td>
+    <td class="ingredient">ingredient 3</td>
+    </tr>
+    </table>
+    </section>
+    <section>
+    <h3>Steps:</h3>
+    <ol>
+    <li>Step 1</li>
+    <li>Step 2</li>
+    <li>Step 3</li>
+    <li>Enjoy!</li>
+    </ol>
+    </section>
+    </div>
+    </article>
+
+
+
+    <hr>
+    <article>
+
+    <h2 id="coconut">Coconut Macaroons</h2>
+    <hr>
+    <div class="fb">
+    <section>
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.-LL7A-QJF98R8FhnRRvi2wHaKE%26pid%3DApi&f=1" height="300px" alt="coconut macaroons" title="What a wonderful treat!!" >
+    </section>
+    <section>
+
+
+    <p>Coconut macaroons are a wonderfully light and fluffy cookie made up of mostly egg whites and coconut.</p>
+    <p>This recipe yields 1<sup>1</sup>&frasl;<sub>2</sub> dozen cookies.</p>
+
+    <h3>Ingredients:</h3>
+
+    <table>
+    <tr>
+    <th>Amount</th>
+    <th>Ingedient</th>
+    </tr>
+    <tr>
+    <td class="amount">2</td>
+    <td class="ingredients">egg whites</td>
+    </tr>
+    <tr>
+    <td class="amount"><sup>1</sup>&frasl;<sub>2</sub> tsp</td>
+    <td class="ingredient">vanilla</td>
+    </tr>
+    <tr>
+    <td class="amount"><sup>2</sup>&frasl;<sub>3</sub> cup</td>
+    <td class="ingredient">sugar</td>
+    </tr>
+    <tr>
+    <td class="amount">1 <sup>1</sup>&frasl;<sub>2</sub> cups</td>
+    <td class="ingredient">coconut</td>
+    </tr>
+    <td class="amount">dash</td>
+    <td class="ingredient">salt</td>
+    </tr>
+    </table>
+    </section>
+    <section>
+    <br>
+    <h3>Directions</h3>
+    <ol>
+    <li>Pre-heat oven to 325<sup>o</sup> F</li>
+    <li>Beat egg whites with a dash of salt and vanilla until soft peaks form.</li>
+    <li>Gradually add sugar, beating until stiff. </li>
+    <li> Gently fold in the coconut.</li>
+    <li>Drop by teaspoon onto a greased cookie sheet. </li>
+    </section>
+    </div>
+    </article>
     </body>
-</html>
+    </html>*@
 
 
