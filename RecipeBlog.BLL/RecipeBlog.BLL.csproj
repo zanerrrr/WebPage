@@ -19,6 +19,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="runtime.tizen.4.0.0-armel.Microsoft.NETCore.App" Version="2.0.0" />
+    <PackageReference Include="Microsoft.NETCore.App" Version="2.2.8" />
   </ItemGroup>
 
 </Project>
