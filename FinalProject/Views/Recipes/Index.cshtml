@@ -2,10 +2,28 @@
 @model List<RecipesModel>
 
 @{
-    ViewData["Title"] = "Recipes";
+    ViewData["Title"] = "Recipes database";
+    string[] TableHeaders = new string[]{"#"      
+      ,"Title"
+      ,"Description"
+      ,"Ingredients"
+      ,"Instructions"};
 }
 
-<table>
+<div>
+<table class="table table-bordered table-hover"> 
+<thead class="thead-light">
+    <tr>
+                @{
+                    foreach(var head in TableHeaders)
+                    {
+                        <th>
+                            @head
+                        </th>
+                    }
+        }
+    </tr>
+</thead>
     @foreach (var recipe in Model)
     {
         <tr>
@@ -21,6 +39,10 @@
             <td>
                 @Html.Encode(recipe.Ingredients)
             </td>
+            <td>
+                @Html.Encode(recipe.Instructions)
+            </td>
         </tr>
     }
-
+</table>
+</div>

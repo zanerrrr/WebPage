@@ -1,23 +1,18 @@
 html {
     font-size: 14px;
-    background-color: #E71EDA;
 }
 
 body {
     font-size: 14px;
-    background-color: #F9EEC5;
 }
 
 h1 {
     text-align: center;
-    background-color: #E71EDA;
+    color: black;
 }
 
 h2 {
-    color: white;
-    border: 5px solid #E71EDA;
-    background-color: #E71EDA;
-    border-radius: 15px;
+    color: black;
 }
 
 @media (min-width: 768px) {
@@ -63,6 +58,10 @@ body {
 .card:hover {
     color: var(--white);
     transform:translateY(-50px);
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
 }
 
 
