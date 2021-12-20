@@ -31,7 +31,6 @@ namespace RecipeBlog.Controllers
 			{
                 if (!ModelState.IsValid)
                 {
-                    string name = m.Name;
                     string email = m.Email;
                 }
 

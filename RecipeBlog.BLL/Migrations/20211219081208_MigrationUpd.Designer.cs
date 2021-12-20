@@ -11,8 +11,8 @@ using RecipeBlog.BLL.Context;
 namespace RecipeBlog.BLL.Migrations
 {
     [DbContext(typeof(RecipesDBContext))]
-    [Migration("20211215201042_firstMigration")]
-    partial class firstMigration
+    [Migration("20211219081208_MigrationUpd")]
+    partial class MigrationUpd
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,13 +35,21 @@ namespace RecipeBlog.BLL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Ingredients")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Instructions")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Recipies");
+                    b.ToTable("Recipes");
                 });
 #pragma warning restore 612, 618
         }
