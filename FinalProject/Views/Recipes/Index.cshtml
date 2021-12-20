@@ -1,72 +1,48 @@
-﻿@{
-    ViewData["Title"] = "Your Recipes";
+@using RecipeBlog.UI.Models
+@model List<RecipesModel>
+
+@{
+    ViewData["Title"] = "Recipes database";
+    string[] TableHeaders = new string[]{"#"      
+      ,"Title"
+      ,"Description"
+      ,"Ingredients"
+      ,"Instructions"};
 }
-<!DOCTYPE html>
-<html lang="en">
-<section class="container">
-    <div class="card_card1">
-        <div class="card_content">
-            <div class="content_cover">
-                <img class="cover_img--food1"
-                src="https://www.eatwell101.com/wp-content/uploads/2017/06/chicken-pasta-recipe.jpg" width="300px" alt="chicken pasta with tomatos and spinach"
-                </div>
-                <div class="content_text">
-                    <h4
-                    class="content_title">Chicken  Pasta with Tomatoes and Spinach</h4>
-                    <hr class="title_divider">
-                    <p><em>Fresh juicy tomatoes with spinach as an addition to the Italian - style pasta.</em></p>
-                    </div>
-                    <div class="content_footer">
-                        <a href="#" target="_blank"
-                        class="footer_links">Recieps &#8594;
-                    </a><br><br>
-                    <input class="links_checkbox"
-                    type="checkbox"><label
-                    for="links_checkbox"></label><span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card_card2">
-                        <div class="card_content">
-                            <div class="content_cover">
-                                <img class="cover_img--food2"
-                src="https://jane-athome.com/wp-content/uploads/2015/06/Chicken-Caesar-Salad.jpg" width="300px" alt="chicken pasta with tomatos and spinach">
-                </div>
-                <div class="content_text">
-                    <h4
-                    class="content_title">Chicken Caesar Salad</h4>
-                    <hr class="title_divider">
-                    <p><em>Crispy chicken with fresh, juicy salad.</em></p>
-                    </div>
-                    <div class="content_footer">
-                        <a href="#" target="_blank"
-                        class="footer_links">Recieps &#8594;
-                    </a><br><br>
-                    <input class="links_checkbox"
-                    type="checkbox"><label
-                    for="links_checkbox"></label><span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card_card3">
-                        <div class="card_content">
-                            <div class="content_cover">
-                                <img class="cover_img--food3"
-                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.-LL7A-QJF98R8FhnRRvi2wHaKE%26pid%3DApi&f=1" height="300px" alt="coconut macaroons" title="What a wonderful treat!!" >
-                </div>
-                <div class="content_text">
-                    <h4
-                    class="content_title">Coconut Macaroons</h4>
-                    <hr class="title_divider">
-                    <p><em>Coconut macaroons are a fluffy cookie made up of mostly egg whites and coconut.</em></p>
-                    </div>
-                    <div class="content_footer">
-                        <a href="#" target="_blank"
-                        class="footer_links">Recieps &#8594;
-                    </a><br><br>
-                    <input class="links_checkbox"
-                    type="checkbox"><label
-                    for="links_checkbox"></label><span>
-                        </div>
-                      </div>
-                      </section>
+
+<div>
+<table class="table table-bordered table-hover"> 
+<thead class="thead-light">
+    <tr>
+                @{
+                    foreach(var head in TableHeaders)
+                    {
+                        <th>
+                            @head
+                        </th>
+                    }
+        }
+    </tr>
+</thead>
+    @foreach (var recipe in Model)
+    {
+        <tr>
+            <td>
+                @Html.Encode(recipe.Id)
+            </td>
+            <td>
+                @Html.Encode(recipe.Title)
+            </td>
+            <td>
+                @Html.Encode(recipe.Description)
+            </td>
+            <td>
+                @Html.Encode(recipe.Ingredients)
+            </td>
+            <td>
+                @Html.Encode(recipe.Instructions)
+            </td>
+        </tr>
+    }
+</table>
+</div>
