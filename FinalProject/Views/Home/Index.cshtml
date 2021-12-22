@@ -8,17 +8,13 @@
 <div class="text-allign">
     <h1 class="display-4" class="align-content-center">Welcome</h1>
     <p>You are entering the world of amazingly tasty food. Grab your spoons and forks and get ready your tastebuds! We have created a database of easy-make, but nonetheless tasty recipes. On <a asp-action="Index" asp-controller="Recipes">Recipes Database</a> you will find the recipes that we have added.</p>
-    <p>But you can also submmit yours on <a asp-action="Index" asp-controller="YourRecipes">Add Your Recipes</a> page. And we will add them to the database.</p>
-    <br />
-    <br />
+    <p>But you can also submmit yours on <a asp-action="Index" asp-controller="YourRecipes">Submit Your Recipes</a> page. And we will add them to the database.</p>
+    <br /><br />
     <p>Don't be afraid to leave your comments or suggestions on <a asp-action="Index" asp-controller="ContactUs">Contact us</a> page.</p>
 </div>
 <div>
 </div>
-<br />
-<br />
-<br />
-<br />
+<br /><br /><br />
 
 
 <div>
@@ -28,8 +24,10 @@
 
 @using (Html.BeginForm("Index", "Home", FormMethod.Post))
 {
-    @Html.TextBoxFor(m => m.Email, new {placeholder = "Email"})
+    @Html.TextBoxFor(m => m.Name, new {placeholder = "Name"})
     <br />
+    @Html.TextBoxFor(m => m.Email, new {placeholder = "Email"})
+    <br/>
     <input type="submit" class="btn-primary" value="Subscribe" id="SubscribeButtonId" />
 }
 

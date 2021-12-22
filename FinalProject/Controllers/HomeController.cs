@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using FinalProject.Models;
 using RecipeBlog.UI.Models;
+using Microsoft.Data.SqlClient;
 
 namespace RecipeBlog.Controllers
 {
@@ -23,14 +24,16 @@ namespace RecipeBlog.Controllers
         {
             return View();
         }
-
+        
         [HttpPost]
-        public IActionResult Index(SubscriberModel m)
+        public IActionResult AddSubscriber(SubscriberModel m)
         {
             try
 			{
+                
                 if (!ModelState.IsValid)
                 {
+                    string name = m.Name;
                     string email = m.Email;
                 }
 
