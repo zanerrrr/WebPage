@@ -21,7 +21,7 @@
                             @head
                         </th>
                     }
-        }
+                }
     </tr>
 </thead>
     @foreach (var recipe in Model)
@@ -41,6 +41,9 @@
             </td>
             <td>
                 @Html.Encode(recipe.Instructions)
+            </td>
+             <td>
+                @Html.ActionLink("Edit", "Edit")
             </td>
         </tr>
     }

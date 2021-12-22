@@ -27,5 +27,11 @@ namespace RecipeBlog.Controllers
             ViewBag.selectedItem = "recipes";
             return View(listOfModelRecipes);
         }
+        
+        public IActionResult Edit()
+        {
+            return View();
+        }
+
     }
 }
